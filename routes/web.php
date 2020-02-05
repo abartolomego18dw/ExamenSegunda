@@ -27,5 +27,6 @@ Route::get('alumnos', 'AlumnosController@index')->name('alumnos');
 Route::get('foto', 'FotoController@index')->name('foto');
 Route::post('foto', 'FotoController@create')->name('imagen');
 Route::get('api', 'ApiController@index')->name('api');
+Route::get('fct', 'FctController@index')->name('fct');
 
 

@@ -28,10 +28,29 @@
 	    <th>Valoracion Alumno</th>        
 	    <th>Valoracion Empresa</th>        
 	  </tr>
+
+	  @foreach($alumnos as $alumno)
+
+
+	  <tr>
+	  	
+	  	<td>{{$alumno->id}}</td>
+	  	<td>{{$alumno->nombre}}</td>
+	  	<td>{{$alumno->apellido}}</td>
+	  	<!--<td>{{$alumno->pivot->fechainicio}}</td>
+	  	<td>{{$alumno->pivot->fechafin}}</td>
+	  	<td>{{$alumno->pivot->valoracionalumno}}</td>
+	  	<td>{{$alumno->pivot->valoracionempresa}}</td>-->
+
+
+
+	  </tr>
+
+	  @endforeach
 	  
 	</table>	
 	  	
 
-	<h4>Si no ha habido alumnos indicar: "En ese periodo de fechas ningun alumno/a efectuó las prácticas en esta empresa".</h4>
+	
 
 @endsection

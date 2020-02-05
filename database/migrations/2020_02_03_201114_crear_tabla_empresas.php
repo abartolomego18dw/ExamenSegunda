@@ -18,7 +18,7 @@ class CrearTablaEmpresas extends Migration
             $table->string('nombre');
             $table->string('direccion');
             $table->string('telefono');
-            $table->string('email')->nullable();
+            $table->string('email',50)->nullable();
             $table->string('web');
             $table->timestamps();
         });

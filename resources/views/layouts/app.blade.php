@@ -30,10 +30,10 @@
                 <a class="navbar-brand" href="solodia">
                     EJERCICIO 1
                 </a>
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="{{route('alumnos')}}">
                     EJERCICIO 2
                 </a>
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="{{route('foto')}}">
                     EJERCICIO 3
                 </a>
                 <a class="navbar-brand" href="">

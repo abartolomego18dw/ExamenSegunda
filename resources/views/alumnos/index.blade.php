@@ -9,13 +9,27 @@
 
   <table>
     <tr>
+
       <th>Nombre</th>
       <th>Apellido</th>
       <th>Fecha Nacimiento</th>
       <th>Email</th>
     </tr>
     
+      @foreach ($alumnos as $alumno)
+      <tr>
+
+      <td>{{$alumno->nombre}}</td>
+      <td>{{$alumno->apellido}}</td>
+      <td>{{$alumno->fechanacimiento}}</td>
+      <td>{{$alumno->email}}</td>
+
+      </tr>
+      @endforeach
+    
+    
   </table>
+
 
   @endsection
     

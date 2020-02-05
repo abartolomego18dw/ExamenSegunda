@@ -13,10 +13,10 @@ class ApiController extends Controller
         
 
         $client = new Client([
-		    'base_uri' => 'https://swapi.co'
+		    'base_uri' => 'https://swapi.co/api'
 		]);
 
-		$response = $client->request('GET','people/1/');
+		$response = $client->request('GET','people/');
 		$personajes= json_decode($response->getBody()->getContents());
 
 		foreach ($personajes as $personaje){

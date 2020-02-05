@@ -39,7 +39,7 @@
                 <a class="navbar-brand" href="">
                     EJERCICIO 4
                 </a>
-                <a class="navbar-brand" href="">
+                <a class="navbar-brand" href="{{route('api')}}">
                     EJERCICIO 5
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

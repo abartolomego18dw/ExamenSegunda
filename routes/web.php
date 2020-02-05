@@ -25,4 +25,5 @@ Route::get('solodia', function () {
 
 Route::get('alumnos', 'AlumnosController@index')->name('alumnos');
 Route::get('foto', 'FotoController@index')->name('foto');
+Route::post('foto', 'FotoController@create')->name('imagen');
 

@@ -5,8 +5,8 @@
 @section('content')
 
   <h2>User</h2>
-  <img src="" alt="Imagen"><br><br>
-  <form action="" method="">
+  <img src="../../../img/{{$usuario->img}}" ><br><br>
+  <form action="{{route('imagen')}}" method="post">
       @csrf
       <div class="form-group">
           <label>Selecciona una nueva imagen</label>
@@ -17,6 +17,7 @@
           <input type="submit" value="Subir imagen" class="boton">
       </div>
   </form>
+
 
   @endsection
     

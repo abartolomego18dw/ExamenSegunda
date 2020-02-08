@@ -37,11 +37,10 @@
 	  	<td>{{$alumno->id}}</td>
 	  	<td>{{$alumno->nombre}}</td>
 	  	<td>{{$alumno->apellido}}</td>
-	  	<!--<td>{{$alumno->pivot->fechainicio}}</td>
-	  	<td>{{$alumno->pivot->fechafin}}</td>
-	  	<td>{{$alumno->pivot->valoracionalumno}}</td>
-	  	<td>{{$alumno->pivot->valoracionempresa}}</td>-->
 
+	  	<td>{{$nombre}}</td>
+	  	
+	  	
 
 
 	  </tr>

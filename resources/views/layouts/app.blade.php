@@ -27,7 +27,7 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Examen 2 Eval.
                 </a>
-                <a class="navbar-brand" href="solodia">
+                <a class="navbar-brand" href="{{route('permitido')}}">
                     EJERCICIO 1
                 </a>
                 <a class="navbar-brand" href="{{route('alumnos')}}">

@@ -13,20 +13,29 @@ class ApiController extends Controller
         
 
         $client = new Client([
-		    'base_uri' => 'https://swapi.co/api'
+		    'base_uri' => 'https://swapi.co'
 		]);
 
-		$response = $client->request('GET','people/');
+		$response = $client->request('GET','api/people');
 		$personajes= json_decode($response->getBody()->getContents());
+		$personaje = $personajes->results;
 
-		foreach ($personajes as $personaje){
 
+		
+
+			
+
+			foreach($personaje as $personaj){
 			$persona = new Starwars();
-			$persona->name = $personaje->name;
-			$persona->height = $personaje->heigth;
-			$persona->birth_year = $personaje->birth_year;
+			$persona->name = $personaj->name;
+			$persona->height = $personaj->height;
+			$persona->birth_year = $personaj->birth_year;
+			$persona->homeworld = $personaj->homeworld;
+			$persona->numfilms = $personaj->sizeof(films);
 			$persona->save();
 		}
+			return redirect('/');
+		
 		
 
 

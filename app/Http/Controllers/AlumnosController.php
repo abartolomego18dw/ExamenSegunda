@@ -12,9 +12,14 @@ class AlumnosController extends Controller
     public function index()
     {	
 
-    	$alumnos=Alumno::orderBy('apellido', 'ASC')->get();
+    	$alumnos=Alumno::whereDate('fechanacimiento', '>', 20020208)->orderBy('apellido', 'ASC')->get();
 
 
         return view('alumnos/index')->with('alumnos', $alumnos);
     }
+    public function permitido()
+    {
+        return view('permitido');
+    }
+
 }

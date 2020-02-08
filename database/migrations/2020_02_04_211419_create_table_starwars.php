@@ -16,10 +16,10 @@ class CreateTableStarwars extends Migration
         Schema::create('starwars', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->integer('height');
+            $table->string('height');
             $table->string('birth_year');
             $table->string('homeworld');
-            $table->integer('numfilms');
+            $table->string('numfilms');
             $table->timestamps();
         });
     }

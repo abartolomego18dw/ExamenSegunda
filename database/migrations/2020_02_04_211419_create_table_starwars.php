@@ -16,7 +16,7 @@ class CreateTableStarwars extends Migration
         Schema::create('starwars', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('height');
+            $table->integer('height');
             $table->string('birth_year');
             $table->string('homeworld');
             $table->string('numfilms');

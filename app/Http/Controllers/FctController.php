@@ -13,9 +13,7 @@ class FctController extends Controller
         
     	$alumnos = Alumno::all();
     	$empresas = Empresa::all();
-    	foreach($alumnos->empresas as $empresa){
-    		$nombre=$empresa->name;
-    	}
+    	
 
     	return view('fct/index', ['alumnos'=>$alumnos, 'empresas'=>$empresas]);
         		

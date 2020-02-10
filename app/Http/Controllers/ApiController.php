@@ -13,10 +13,10 @@ class ApiController extends Controller
         
 
         $client = new Client([
-		    'base_uri' => 'https://swapi.co'
+		    'base_uri' => 'https://swapi.co/api/'
 		]);
 
-		$response = $client->request('GET','api/people');
+		$response = $client->request('GET','people');
 		$personajes= json_decode($response->getBody()->getContents());
 		$personaje = $personajes->results;
 
@@ -30,9 +30,13 @@ class ApiController extends Controller
 			$persona->name = $personaj->name;
 			$persona->height = $personaj->height;
 			$persona->birth_year = $personaj->birth_year;
-			$persona->homeworld = $personaj->homeworld;
-			$persona->numfilms = $personaj->sizeof(films);
+			$persona->numfilms = count($personaj->films);
+			$filtrar = substr($personaj->homeworld, 21);
+			$response2 = $client->request('GET',$filtrar);
+			$homeworld= json_decode($response2->getBody()->getContents());
+			$persona->homeworld = $homeworld->name;
 			$persona->save();
+			
 		}
 			return redirect('/');
 		

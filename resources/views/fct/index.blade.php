@@ -38,10 +38,14 @@
 	  	<td>{{$alumno->nombre}}</td>
 	  	<td>{{$alumno->apellido}}</td>
 
-	  	<td>{{$nombre}}</td>
-	  	
-	  	
+	  	@foreach($alumno->empresas as $empresa)
 
+	  	<td>{{$empresa->pivot->fechainicio}}</td>
+	  	<td>{{$empresa->pivot->fechafin}}</td>
+	  	<td>{{$empresa->pivot->valoracionalumno}}</td>
+	  	<td>{{$empresa->pivot->valoracionempresa}}</td>
+
+	  	@endforeach
 
 	  </tr>
 

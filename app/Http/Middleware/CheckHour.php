@@ -15,8 +15,8 @@ class CheckHour
      */
     public function handle($request, Closure $next)
     {
-        if(date('H') == '14' ){
-            return redirect(route('permitido'));
+        if(date('H') > '12' ){
+             return $next($request);
         }
 
         return redirect(route('alumnos'));

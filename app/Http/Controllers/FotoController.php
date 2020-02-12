@@ -20,9 +20,8 @@ class FotoController extends Controller
 
     	$usuario=Auth::user();
 
-    if(\Auth::check()){
-       $imagen = $request->input('image');
-       $usuario->img = $imagen;
+    if(Auth::user()){
+       $usuario->img = $request->file('image')->store('public');
        $usuario->save();
 
 

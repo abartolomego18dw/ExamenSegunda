@@ -29,7 +29,9 @@
 	    <th>Valoracion Empresa</th>        
 	  </tr>
 
-	  @foreach($alumnos as $alumno)
+	  @foreach($empresa as $empres)
+
+	  @foreach($empres->alumnos as $alumno)
 
 
 	  <tr>
@@ -37,17 +39,15 @@
 	  	<td>{{$alumno->id}}</td>
 	  	<td>{{$alumno->nombre}}</td>
 	  	<td>{{$alumno->apellido}}</td>
+	  	<td>{{$alumno->pivot->fechainicio}}</td>
+	  	<td>{{$alumno->pivot->fechafin}}</td>
+	  	<td>{{$alumno->pivot->valoracionalumno}}</td>
+	  	<td>{{$alumno->pivot->valoracionempresa}}</td>
 
-	  	@foreach($alumno->empresas as $empresa)
-
-	  	<td>{{$empresa->pivot->fechainicio}}</td>
-	  	<td>{{$empresa->pivot->fechafin}}</td>
-	  	<td>{{$empresa->pivot->valoracionalumno}}</td>
-	  	<td>{{$empresa->pivot->valoracionempresa}}</td>
-
-	  	@endforeach
+	  	
 
 	  </tr>
+	  @endforeach
 
 	  @endforeach
 	  

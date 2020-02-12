@@ -36,7 +36,7 @@
                 <a class="navbar-brand" href="{{route('foto')}}">
                     EJERCICIO 3
                 </a>
-                <a class="navbar-brand" href="{{route('fct')}}">
+                <a class="navbar-brand" href="{{route('fct',1)}}">
                     EJERCICIO 4
                 </a>
                 <a class="navbar-brand" href="{{route('api')}}">

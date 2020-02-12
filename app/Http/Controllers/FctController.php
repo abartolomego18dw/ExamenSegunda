@@ -8,14 +8,14 @@ use App\Empresa;
 
 class FctController extends Controller
 {
-    public function index()
+    public function index($id)
     {
         
-    	$alumnos = Alumno::all();
-    	$empresas = Empresa::all();
+    	$empresa = Empresa::where('id',$id)->get();
+    	
     	
 
-    	return view('fct/index', ['alumnos'=>$alumnos, 'empresas'=>$empresas]);
+    	return view('fct/index')->with(['empresa'=>$empresa]);
         		
 	}
 }

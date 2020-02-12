@@ -5,8 +5,10 @@
 @section('content')
 
   <h2>User</h2>
-  <img src="../../../img/{{$usuario->img}}" ><br><br>
-  <form action="{{route('imagen')}}" method="post">
+    @if(Auth::user())
+  <img src="{{Storage::url($usuario->img)}}"><br><br>
+    @endif
+  <form action="{{route('imagen')}}" method="post" enctype="multipart/form-data">
       @csrf
       <div class="form-group">
           <label>Selecciona una nueva imagen</label>
